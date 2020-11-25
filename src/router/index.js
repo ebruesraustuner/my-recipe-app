@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 //import { component } from 'vue/types/umd'
-import Home from '../views/Home.vue'
-import Variables from '../views/Variables.vue'
-import Blog from '../views/Blog.vue'
-import Contact from '../views/Contact.vue'
-import RecommendCook from '../views/RecommendCook'
-import Recipes from '../views/Recipes.vue'
-import Tricks from '../views/Tricks.vue'
-import About from '../views/About.vue'
-import RecipeDetails from '../views/RecipeDetails.vue'
-import BlogDetails from '../views/BlogDetails.vue'
+
+const Home =  () => import('../views/Home.vue')
+const Variables = () => import('../views/Variables.vue')
+const Blog = () => import('../views/Blog.vue') 
+const Contact = () => import('../views/Contact.vue')
+const RecommendCook  = () => import('../views/RecommendCook')
+const Recipes = () => import('../views/Recipes.vue')
+const Tricks = () => import('../views/Tricks.vue')
+const About = () => import('../views/About.vue')
+const RecipeDetails = () => import('../views/RecipeDetails.vue')
+const BlogDetails = () => import('../views/BlogDetails.vue')
 
 Vue.use(VueRouter)
 
