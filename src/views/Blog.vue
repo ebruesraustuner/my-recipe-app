@@ -74,11 +74,6 @@
             flex-wrap: wrap-reverse;
             flex-direction: row;
             padding: 16px 0;
-            @include breakpoint(mobile){
-        -ms-flex-direction: column;
-      flex-direction: column;
-      }
-
 
             .allblogs {
                 flex: 3;
@@ -151,7 +146,7 @@
 </style>
 <script>
     import data from '../../public/data.json'
-    import _ from 'lodash';
+    import orderBy from 'lodash/orderBy';
     export default {
         name: 'Blogs',
         data() {
@@ -198,7 +193,7 @@
             //    return this.blogs;
             //}
             orderedBlogs: function () {
-                return _.orderBy(this.blogs, 'date')
+                return orderBy(this.blogs, 'date')
             }
         }
     }
