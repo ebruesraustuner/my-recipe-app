@@ -7,17 +7,6 @@ $lightbrown: #735751;
 $brown: #462521;
 
 /* fonts */
-@font-face {
-    font-family: "Montserrat";
-    src: url(/fonts/Montserrat-ExtraBold.ttf);
-
-}
-
-@font-face {
-    font-family: "Merriweather";
-    src: url(/fonts/Merriweather-Bold.ttf);
-    font-weight: 800;
-}
 
 @font-face {
     font-family: "Merriweather";
@@ -200,9 +189,6 @@ button {
 .vueperslides--fixed-height {
     height: 400px;
 }
-
-/*  */
-
 /* breakpoints */
 @mixin breakpoint($point) {
     @if $point==desktop {

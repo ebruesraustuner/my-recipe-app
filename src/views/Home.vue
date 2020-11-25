@@ -172,7 +172,7 @@
           animation: none;
           max-width: 100%;
           width: 280px;
-          background-image: url(/img/chef-hat-small.11e66397.png);
+          background-image: url(/img/chef-hat-small.png);
           height: 280px;
         }
       }
