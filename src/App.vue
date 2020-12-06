@@ -13,7 +13,7 @@
       </div>
       <input type="checkbox" id="navcheck">
       <label class="navlinks">
-        <router-link to="/variables">Using Variables</router-link>
+        <!-- <router-link to="/variables">Using Variables</router-link> -->
         <router-link to="/recipes">Recipes</router-link>
         <router-link to="/recommendcook">What Should I Cook</router-link>
         <router-link to="/tricks">Tricks</router-link>
