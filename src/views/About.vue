@@ -35,6 +35,9 @@
       flex-direction: row;
       justify-content: space-evenly;
       padding: 24px;
+            @include breakpoint(mobile) {
+                flex-direction: column;
+            }
 
       .about-desc-bg {
         background-color: $pink;
@@ -53,6 +56,9 @@
       .about-desc-p {
         padding: 0 40px;
         flex: 2;
+         @include breakpoint(mobile) {
+           padding: 16px;
+         }
 
         p {
           margin: 0;
@@ -96,6 +102,9 @@
         text-align: right;
         margin: 0;
         align-self: center;
+         @include breakpoint(mobile) {
+           text-align: center;
+         }
       }
 
       img {
@@ -106,6 +115,9 @@
         flex: 2;
         align-self: center;
       }
+       @include breakpoint(mobile) {
+         text-align: center;
+       }
     }
   }
 </style>

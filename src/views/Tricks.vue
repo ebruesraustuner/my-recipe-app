@@ -39,6 +39,7 @@
             flex-wrap: wrap;
             flex-direction: row;
             padding: 8px;
+            padding-left: 0;
 
             .level-name {
                 margin-right: 8px;
@@ -48,6 +49,7 @@
                 font-family: Montserrat;
                 font-weight: 500;
                 font-size: 15px;
+                margin: 4px 4px 4px 0; 
                 cursor: pointer;
 
                 &.Intermadiate {
@@ -72,6 +74,13 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 16px;
+            @include breakpoint(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include breakpoint(mobile) {
+                grid-template-columns: repeat(1, 1fr);
+            }
 
             .cards {
                 margin: 0;

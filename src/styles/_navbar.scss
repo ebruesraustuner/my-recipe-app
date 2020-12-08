@@ -1,3 +1,4 @@
+
 .myNavbar {
     background-color: white;
     display: flex;
@@ -12,7 +13,7 @@
 
     a {
         text-decoration: none;
-        padding: 2px;
+        padding: 8px;
         position: relative;
         display: flex;
         color: $brown;
@@ -34,7 +35,7 @@
                 display: flex;
                 flex: wrap;
                 flex-direction: column;
-                padding: 4px;
+                padding: 0;
                 position: absolute;
                 right: 0;
                 top: 56px;
@@ -42,6 +43,10 @@
                 height: 100%;
                 background:$beige;
                 color: $sand;
+                justify-content: center;
+                align-content: space-around;
+                visibility: visible;
+                opacity: 1;
             }
         }
     }
@@ -82,9 +87,15 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        
 
         @include breakpoint(mobile) {
-            display: none;
+            position: absolute;
+            top: 56px;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility .3s linear,opacity .3s linear;;
+           
         }
     }
 }

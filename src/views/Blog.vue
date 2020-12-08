@@ -74,6 +74,9 @@
             flex-wrap: wrap-reverse;
             flex-direction: row;
             padding: 16px 0;
+            @include breakpoint(mobile) {
+                flex-direction: column-reverse;
+            }
 
             .allblogs {
                 flex: 3;
