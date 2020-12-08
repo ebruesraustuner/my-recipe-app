@@ -64,24 +64,25 @@
 
                 .category {
                     list-style: none;
-                    padding: 8px 0;
+                    padding: 16px 0;
                     cursor: pointer;
                     transition: all 0.35s;
+                    border-bottom: 2px solid $brown;
 
-                    &::after {
+                   /*  &::after {
                         display: block;
                         content: '';
                         width: 100%;
                         border: 1px solid $brown;
                         margin-top: 8px;
-                    }
+                    } */
 
                     &.active {
                         box-shadow: 0px 1px 3px 0px #00000026;
                     }
 
                     &:hover {
-                        background: lightgray;
+                        background: rgba($beige, .8);
                     }
                     span {
                         width: 100%;
@@ -95,8 +96,7 @@
             flex: 1;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            ;
-            grid-template-rows: 200px auto;
+            grid-template-rows: 160px;
             /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
             grid-gap: 16px;
 

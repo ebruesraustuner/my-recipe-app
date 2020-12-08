@@ -75,6 +75,9 @@
             justify-content: space-between;
             flex-wrap: wrap;
             flex-direction: row;
+            @include breakpoint(mobile) {
+                flex-direction: column;
+            }
             h4, p {
                 width: 100%;
             }
@@ -124,7 +127,7 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 ;
-                grid-template-rows: 200px auto;
+                grid-template-rows:  auto;
                 /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
                 grid-gap: 16px;
                 padding: 16px 0;
