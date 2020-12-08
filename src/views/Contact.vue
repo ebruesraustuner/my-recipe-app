@@ -1,7 +1,6 @@
 <template>
-    <div class="main">
-        <h1>
-            hoşgeldiniz </h1>
+    <div style="text-align:center">
+        <h2> Coming Soon in here </h2>
     </div>
 </template>
 <style lang="scss">
