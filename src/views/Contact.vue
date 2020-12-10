@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="form" name="contactForm" @submit="contactForm" id="contactForm" method="post" data-netlify="true"
+        <form class="form" name="contactForm" @submit="contactForm" hidden id="contactForm" method="post" data-netlify="true"
             data-netlify-honeypot="bot-field">
 
             <p v-if="errors.length">
@@ -10,7 +10,7 @@
                 </ul>
             </p>
             <div>
-                <input type="hidden" name="contactForm" value="contactForm" /><input type="text" name="name" />
+                <input type="hidden" name="contactForm" value="contactForm" />
             </div>
             <div class="vtextbox">
                 <label for="name" class="vlabel"><span>Name</span></label>
