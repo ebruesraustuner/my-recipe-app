@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="form" name="contactForm" id="contactForm" @submit="contactForm" method="post" data-netlify="true">
+        <form class="form" name="contactForm" id="contactForm"  method="post" data-netlify="true">
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="vbutton-end">
-                <button type="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
+                <button type="submit" class="vbutton vbutton-default vbutton-end">Send</button>
             </div>
 
         </form>
