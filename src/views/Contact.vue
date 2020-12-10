@@ -25,7 +25,7 @@
             </div>
 
             <div class="vbutton-end">
-                <button tydive="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
+                <button type="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
             </div>
 
         </form>
