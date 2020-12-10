@@ -1,8 +1,7 @@
 <template>
     <div>
-        <form class="form" name="contactFrom" id="contactForm" @submit="contactForm" method="post" action="/thanks"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field">
+        <form class="form" name="contactForm" id="contactForm" @submit="contactForm" method="post" action="/thanks"
+            data-netlify="true" data-netlify-honeypot="bot-field">
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
@@ -17,7 +16,8 @@
             </div>
             <div class="vtextbox">
                 <label for="email" class="vlabel"><span> e-mail</span></label>
-                <input id="email" v-model="email" type="email" name="email" class="vinput" placeholder="aysefatma@hayriye.com">
+                <input id="email" v-model="email" type="email" name="email" class="vinput"
+                    placeholder="aysefatma@hayriye.com">
             </div>
             <div class="vtextbox">
                 <label for="message" class="vlabel"><span>Message</span></label>
