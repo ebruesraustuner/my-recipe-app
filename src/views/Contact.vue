@@ -1,6 +1,7 @@
 <template>
     <div>
-        <form class="form" name="contactForm" id="contactForm" @submit="contactForm" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form class="form" name="contactForm" @submit="contactForm" id="contactForm" method="post" data-netlify="true"
+            data-netlify-honeypot="bot-field">
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
@@ -8,7 +9,9 @@
                     <li v-for="error in errors" :key="error">{{ error }}</li>
                 </ul>
             </p>
-
+            <div>
+                <input type="hidden" name="contactForm" value="contactForm" /><input type="text" name="name" />
+            </div>
             <div class="vtextbox">
                 <label for="name" class="vlabel"><span>Name</span></label>
                 <input id="name" v-model="name" type="text" name="name" class="vinput" placeholder="Ayşe Fatma Hayriye">
@@ -45,7 +48,7 @@
         },
         methods: {
             contactForm: function (e) {
-                if (this.name) {
+                if (this.name && this.email) {
                     return true;
                 }
                 this.errors = [];
