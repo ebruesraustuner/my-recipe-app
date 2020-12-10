@@ -82,6 +82,12 @@ p {
     color: $lightbrown;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 .logo-text {
     font-family: Montserrat;
     font-weight: 900;
@@ -124,6 +130,10 @@ p {
 
 .vbutton-start {
     align-self: flex-start;
+}
+
+.vbutton-end {
+    align-self: flex-end;
 }
 
 .vueperslide {
@@ -189,6 +199,91 @@ button {
 .vueperslides--fixed-height {
     height: 400px;
 }
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .vtextbox {
+        display: flex;
+        margin: 4px 0;
+
+    }
+
+    span {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 14px;
+        color: $brown;
+        text-align: left;
+    }
+
+    .vlabel {
+        min-width: 160px;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding: 8px 0;
+
+    }
+
+    .vinput {
+        border-radius: 4px;
+        border: 1px solid rgba($lightbrown, .6);
+        padding: 8px;
+        margin: 8px 0;
+        min-width: 280px;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba($lightbrown, 0.4);
+        -moz-box-shadow: 2px 2px 6px 0px rgba($lightbrown, 0.4);
+        box-shadow: 2px 2px 6px 0px rgba($lightbrown, 0.4);
+
+        &:hover {
+            border:1px solid $beige;
+            -webkit-box-shadow: 2px 2px 6px 0px rgba($beige, 0.4);
+        -moz-box-shadow: 2px 2px 6px 0px rgba($beige, 0.4);
+        box-shadow: 2px 2px 6px 0px rgba($beige, 0.4);
+        }
+
+        &:focus {
+            border: 2px solid $pink;
+        }
+    }
+
+    .vtextarea {
+        border: 1px solid rgba($lightbrown, .6);
+        border-radius: 6px;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 8px 0;
+        min-width: 280px;
+        height: 96px;
+        -webkit-box-shadow: 2px 2px 6px 0px rgba($lightbrown, 0.4);
+        -moz-box-shadow: 2px 2px 6px 0px rgba($lightbrown, 0.4);
+        box-shadow: 2px 2px 6px 0px rgba($lightbrown, 0.4);
+
+        &:hover {
+            border:1px solid $beige;
+            -webkit-box-shadow: 2px 2px 6px 0px rgba($beige, 0.4);
+        -moz-box-shadow: 2px 2px 6px 0px rgba($beige, 0.4);
+        box-shadow: 2px 2px 6px 0px rgba($beige, 0.4);
+        }
+
+        &:focus {
+            border: 2px solid $pink;
+        }
+    }
+}
+
 /* breakpoints */
 @mixin breakpoint($point) {
     @if $point==desktop {

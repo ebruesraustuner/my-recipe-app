@@ -1,42 +1,83 @@
 <template>
-    <div style="text-align:center">
-        <h2> Coming Soon in here </h2>
+    <div>
+        <form class="form" @submit="contactForm" method="post" data-netlify="true">
+
+            <p v-if="errors.length">
+                <b>Please correct the following error(s):</b>
+                <ul>
+                    <li v-for="error in errors" :key="error">{{ error }}</li>
+                </ul>
+            </p>
+
+            <div class="vtextbox">
+                <label for="name" class="vlabel"><span>Name</span></label>
+                <input id="name" v-model="name" type="text" name="name" class="vinput" placeholder="Ayşe Fatma Hayriye">
+            </div>
+            <div class="vtextbox">
+                <label for="email" class="vlabel"><span> e-mail</span></label>
+                <input id="email" v-model="email" type="email" name="email" class="vinput" placeholder="aysefatma@hayriye.com">
+            </div>
+            <div class="vtextbox">
+                <label for="message" class="vlabel"><span>Message</span></label>
+                <textarea v-model="message" placeholder="Your message" class="vtextarea"></textarea>
+            </div>
+
+            <div class="vbutton-end">
+                <button tydive="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
+            </div>
+
+        </form>
     </div>
 </template>
 <style lang="scss">
-    #app {
-        height: 99vh;
-    }
 
-    .main {
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-
-
-        h1 {
-            padding: 0;
-            margin: 0;
-            text-decoration: underline;
-            position: absolute;
-            left: 50%;
-            top: 30%;
-            transform: translate(-50%, -70%);
-            animation: lefttoright 2s ease-in ;
-        }
-
-        @keyframes lefttoright {
-            0% {
-                left: 150%; 
-            }
-
-            100% {
-                left: 50%;
-            transform: translate(-50%, -70%);
-            }
-        }
-    }
 </style>
+<script>
+    export default {
+        data() {
+            return {
+                errors: [],
+                name: null,
+                email: null,
+                message: null
+            }
+        },
+        methods: {
+            contactForm: function (e) {
+                if (this.name) {
+                    return true;
+                }
+                this.errors = [];
+                if (!this.name) {
+                    this.errors.push('Name Required');
+                }
+                if (!this.email) {
+                    this.errors.push('Email required.');
+                } else if (!this.validEmail(this.email)) {
+                    this.errors.push('Valid email required.');
+                }
+                if (!this.errors.length) {
+                    return true;
+                }
+
+                e.preventDefault();
+            },
+            validEmail: function (email) {
+                var re =
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            /**
+             * Clear the form
+           
+            clearForm() {
+                for (let field in this.contact) {
+                    this.contact[field] = ''
+                }
+            },  */
+
+        }
+
+    }
+</script>
