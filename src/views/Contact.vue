@@ -1,5 +1,4 @@
 <template>
-    <div>
         <form class="form" name="contactForm" @submit="contactForm" hidden id="contactForm" method="post" data-netlify="true"
             data-netlify-honeypot="bot-field">
 
@@ -31,7 +30,6 @@
             </div>
 
         </form>
-    </div>
 </template>
 <style lang="scss">
 
