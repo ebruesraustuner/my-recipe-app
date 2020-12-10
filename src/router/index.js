@@ -12,6 +12,8 @@ const Tricks = () => import('../views/Tricks.vue')
 const About = () => import('../views/About.vue')
 const RecipeDetails = () => import('../views/RecipeDetails.vue')
 const BlogDetails = () => import('../views/BlogDetails.vue')
+const FormSuccess = () => import('../components/FormSuccess.vue')
+const FormFail = () => import('../components/FormFail.vue')
 
 Vue.use(VueRouter)
 
@@ -69,6 +71,17 @@ const routes = [
     path: '/blogdetails/:Rid',
     name: 'blogdetails',
     component: BlogDetails
+  },
+  {
+    path: '/thanks',
+    name: 'success',
+    component: FormSuccess,
+
+  },
+  {
+    path: '/404',
+    name: 'fail',
+    component: FormFail
   }
  
 ]
