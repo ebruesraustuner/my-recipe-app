@@ -1,7 +1,6 @@
 <template>
     <div>
-        <form class="form" name="contactForm" id="contactForm" @submit="contactForm" method="post" action="/thanks"
-            data-netlify="true" data-netlify-honeypot="bot-field">
+        <form class="form" name="contactForm" id="contactForm" @submit="contactForm" method="post" data-netlify="true">
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
