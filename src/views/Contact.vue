@@ -1,5 +1,5 @@
 <template>
-        <form class="form" name="contactForm" hidden id="contactForm" method="post" data-netlify="true">
+        <form class="form" name="contactForm" id="contactForm"  method="post" data-netlify="true" @submit="contactForm">
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
@@ -7,9 +7,6 @@
                     <li v-for="error in errors" :key="error">{{ error }}</li>
                 </ul>
             </p>
-            <div>
-                <input type="hidden" name="contactForm" value="contactForm" />
-            </div>
             <div class="vtextbox">
                 <label for="name" class="vlabel"><span>Name</span></label>
                 <input id="name" v-model="name" type="text" name="name" class="vinput" placeholder="Ayşe Fatma Hayriye">
@@ -25,14 +22,11 @@
             </div>
 
             <div class="vbutton-end">
-                <button type="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
+                <button type="submit" name="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
             </div>
 
         </form>
 </template>
-<style lang="scss">
-
-</style>
 <script>
     export default {
         data() {
