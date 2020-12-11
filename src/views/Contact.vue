@@ -22,7 +22,7 @@
             </div>
             <div class="vtextbox">
                 <label for="message" class="vlabel"><span>Message</span></label>
-                <textarea v-model="message" placeholder="Your message" class="vtextarea"></textarea>
+                <textarea v-model="message" name="message" placeholder="Your message" class="vtextarea"></textarea>
             </div>
 
             <div class="vbutton-end">
@@ -69,15 +69,6 @@
                     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 return re.test(email);
             }
-
-            /**
-             * Clear the form
-           
-            clearForm() {
-                for (let field in this.contact) {
-                    this.contact[field] = ''
-                }
-            },  */
 
         }
 
