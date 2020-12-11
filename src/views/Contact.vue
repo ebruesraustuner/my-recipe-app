@@ -1,5 +1,5 @@
 <template>
-        <form class="form" name="contactForm"  method="post" data-netlify="true" @submit="contactForm" novalidate="true">
+        <form class="form" name="contactForm"  method="post"  @submit="contactForm" novalidate="true" action="https://getform.io/f/95068abb-e017-40c5-842f-fed670077b02" >
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
@@ -22,7 +22,7 @@
             </div>
 
             <div class="vbutton-end">
-                <button type="submit" name="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
+                <button type="submit" value="Submit" class="vbutton vbutton-default vbutton-end">Send</button>
             </div>
 
         </form>
