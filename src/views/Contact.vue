@@ -1,5 +1,5 @@
 <template>
-        <form class="form" name="contactForm" id="contactForm"  method="post" data-netlify="true" @submit="contactForm">
+        <form class="form" name="contactForm" id="contactForm"  method="post" data-netlify="true">
 
             <p v-if="errors.length">
                 <b>Please correct the following error(s):</b>
