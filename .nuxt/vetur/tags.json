@@ -1,0 +1,26 @@
+{
+  "Categories": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/categories.vue"
+  },
+  "LazyCategories": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/categories.vue"
+  },
+  "HelloWorld": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/HelloWorld.vue"
+  },
+  "LazyHelloWorld": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/HelloWorld.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/Logo.vue"
+  },
+  "MyButton": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/My-Button.vue"
+  },
+  "LazyMyButton": {
+    "description": "Auto imported from C:/Users/ebruesra/Desktop/works/recipe-app/components/My-Button.vue"
+  }
+}

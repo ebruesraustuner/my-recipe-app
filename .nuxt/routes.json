@@ -1,0 +1,79 @@
+[
+  {
+    "name": "About",
+    "path": "/About",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\About.vue",
+    "chunkName": "pages/About",
+    "_name": "_5a11b8e1"
+  },
+  {
+    "name": "Blog",
+    "path": "/Blog",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Blog.vue",
+    "chunkName": "pages/Blog",
+    "_name": "_38d2b87e"
+  },
+  {
+    "name": "BlogDetails",
+    "path": "/BlogDetails",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\BlogDetails.vue",
+    "chunkName": "pages/BlogDetails",
+    "_name": "_60250714"
+  },
+  {
+    "name": "Contact",
+    "path": "/Contact",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Contact.vue",
+    "chunkName": "pages/Contact",
+    "_name": "_1f03d8f4"
+  },
+  {
+    "name": "RecipeDetails",
+    "path": "/RecipeDetails",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\RecipeDetails.vue",
+    "chunkName": "pages/RecipeDetails",
+    "_name": "_7da416a8"
+  },
+  {
+    "name": "Recipes",
+    "path": "/Recipes",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipes.vue",
+    "chunkName": "pages/Recipes",
+    "_name": "_d671720e"
+  },
+  {
+    "name": "RecommendCook",
+    "path": "/RecommendCook",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\RecommendCook.vue",
+    "chunkName": "pages/RecommendCook",
+    "_name": "_57582810"
+  },
+  {
+    "name": "Tricks",
+    "path": "/Tricks",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Tricks.vue",
+    "chunkName": "pages/Tricks",
+    "_name": "_1ab8845c"
+  },
+  {
+    "name": "Variables",
+    "path": "/Variables",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Variables.vue",
+    "chunkName": "pages/Variables",
+    "_name": "_4f47e06a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_025773c6"
+  },
+  {
+    "name": "_Home",
+    "path": "/:_Home",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\__Home.vue",
+    "chunkName": "pages/__Home",
+    "_name": "_9b96ebca"
+  }
+]
