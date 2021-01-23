@@ -25,6 +25,7 @@
             <button class="vbutton vbutton-opacity" @click="goTodetail(selectedImage.Id)">Go Recipe </button>
           </div>
         </div>
+        <no-ssr placeholder="Loading...">
         <div class="recipe-image-dynamic">
           <div class="recipe-image-dynamic-lines">
             <img src="../assets/line-1.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
@@ -35,11 +36,14 @@
             <img src="../assets/girl.png" width="80%" data-aos="fade-up" data-aos-duration="2000">
           </div>
         </div>
+        </no-ssr>
       </div>
     </section>
+    <no-ssr placeholder="Loading...">
     <section class="break">
       <img src="../assets/break-image.svg" width="30%" data-aos="zoom-in" data-aos-duration="1200">
     </section>
+    </no-ssr>
     <section class="recommend">
       <h3>We recommend</h3>
       <!--      <div v-for="(recommend, i) in recommends" :key="i">
@@ -58,9 +62,11 @@
       </vueper-slides>
     </section>
     <section class="what-to-cook">
+      <no-ssr placeholder="Loading...">
       <div class="what-to-cook-image">
         <img src="../assets/cook-searching.svg" width="100%" data-aos="fade-up-right" data-aos-duration="2600">
       </div>
+      </no-ssr>
       <div class="what-to-cook-desc">
         <h3> What To Cook </h3>
         <h5>If you think what to cook with the
@@ -74,6 +80,7 @@
         Tricks For
         Beginner Chef's
       </div>
+      <no-ssr placeholder="Loading...">
       <div class="tricks-desc" data-aos="fade-up">
         <p>Layers of sausage gravy, cheese and noodles work
           so magically together,
@@ -83,6 +90,7 @@
         <router-link to="/tricks" tag="button" class="vbutton vbutton-default">Tricks
         </router-link>
       </div>
+      </no-ssr>
     </section>
     <section class="blogs">
       <vueper-slides class="no-shadow" :arrows="false" :visible-slides="3" slide-multiple :gap="2" :slide-ratio="1 / 3"
@@ -112,10 +120,12 @@
           hendrerit, quis eleifend ipsum
           pulvinar.</p>
       </div>
+      <no-ssr placeholder="Loading...">
       <div class="about-image">
         <!--  data-aos="fade-up-left" -->
         <img src="../assets/whoarewe.svg" data-aos="fade-up-left">
       </div>
+      </no-ssr>
     </section>
   </div>
    <Nuxt />
@@ -415,7 +425,7 @@
         return items[Math.floor(Math.random() * items.length)]
       }
     },
-    created() {
+    mounted() {
       AOS.init(),
         this.selectedImage = this.randomItem(this.recipes)
     }
