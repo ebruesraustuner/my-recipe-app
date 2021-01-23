@@ -425,7 +425,7 @@
         return items[Math.floor(Math.random() * items.length)]
       }
     },
-    mounted() {
+    created() {
       AOS.init(),
         this.selectedImage = this.randomItem(this.recipes)
     }
