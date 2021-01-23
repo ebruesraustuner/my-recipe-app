@@ -1,54 +1,26 @@
 {
   "name": "recipe-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@splidejs/splide": "^2.4.14",
     "aos": "^3.0.0-beta.6",
-    "axios": "^0.19.2",
-    "core-js": "^3.6.4",
-    "json-loader": "^0.5.7",
+    "core-js": "^3.8.2",
     "lodash": "^4.17.20",
-    "vue": "^2.6.11",
-    "vue-axios": "^2.1.5",
-    "vue-router": "^3.4.3",
-    "vueperslides": "^2.10.8"
+    "nuxt": "^2.14.12",
+    "vueperslides": "^2.12.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-plugin-router": "^4.5.6",
-    "@vue/cli-service": "~4.2.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "node-sass": "^4.14.1",
-    "sass": "^1.26.11",
-    "sass-loader": "^10.0.2",
-    "vue-template-compiler": "^2.6.11",
-    "webpack-bundle-analyzer": "^4.1.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@nuxtjs/style-resources": "^1.0.0",
+    "fibers": "^5.0.0",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1"
+  }
 }
