@@ -1,135 +1,148 @@
 <template>
-<div>
-  <div class="homepage">
-    <section class="home">
-      <div class="headers">
-        <h1>{{ myHeader }}</h1>
-        <h2>{{ mySubHeader }}</h2>
-        <p>{{ myDesc }}</p>
-        <router-link to="/recipes" tag="button" class="vbutton vbutton-default vbutton-start">Recipes</router-link>
-      </div>
-      <div class="image">
-        <div class="chef-hat"></div>
-      </div>
-    </section>
-    <section class="weekly-recipes">
-      <h3> Weekly Best Recipes </h3>
-      <div class="recipe">
-        <div class="recipe-image-static">
-          <div class="recipe-image-static-image" v-if="selectedImage">
-            <img :src="selectedImage.image" alt="image desc">
-          </div>
-          <div class="recipe-desc">
-            <h4>{{selectedImage.title}}a</h4>
-            <p>{{selectedImage.desc}}</p>
-            <button class="vbutton vbutton-opacity" @click="goTodetail(selectedImage.Id)">Go Recipe </button>
-          </div>
+  <div>
+    <div class="homepage">
+      <section class="home">
+        <div class="headers">
+          <h1>{{ myHeader }}</h1>
+          <h2>{{ mySubHeader }}</h2>
+          <p>{{ myDesc }}</p>
+          <router-link to="/recipes" tag="button" class="vbutton vbutton-default vbutton-start">Recipes</router-link>
         </div>
-        <no-ssr placeholder="Loading...">
-        <div class="recipe-image-dynamic">
-          <div class="recipe-image-dynamic-lines">
-            <img src="../assets/line-1.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
-            <img src="../assets/line-2.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
-            <img src="../assets/line-3.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
-          </div>
-          <div class="recipe-image-dynamic-girl">
-            <img src="../assets/girl.png" width="80%" data-aos="fade-up" data-aos-duration="2000">
-          </div>
+        <div class="image">
+          <div class="chef-hat"></div>
         </div>
-        </no-ssr>
-      </div>
-    </section>
-    <no-ssr placeholder="Loading...">
-    <section class="break">
-      <img src="../assets/break-image.svg" width="30%" data-aos="zoom-in" data-aos-duration="1200">
-    </section>
-    </no-ssr>
-    <section class="recommend">
-      <h3>We recommend</h3>
-      <!--      <div v-for="(recommend, i) in recommends" :key="i">
+      </section>
+      <section class="weekly-recipes">
+        <h3> Weekly Best Recipes </h3>
+        <div class="recipe">
+          <div class="recipe-image-static">
+            <!-- 
+            <div class="recipe-image-static-image" v-if="selectedImage">
+              <img :src="selectedImage.image" alt="image desc">
+            </div>
+            <div class="recipe-desc">
+              <h4>{{selectedImage.title}}a</h4>
+              <p>{{selectedImage.desc}}</p>
+              <button class="vbutton vbutton-opacity" @click="goTodetail(selectedImage.Id)">Go Recipe </button>
+            </div>
+            -->
+            <div class="recipe-image-static">
+              <div class="recipe-image-static-image">
+                <img :src="randomRecipe.image" alt="image desc">
+                
+              </div>
+              <div class="recipe-desc">
+                <h4>{{randomRecipe.title}}</h4>
+                <p>{{randomRecipe.desc}}</p>
+                <button class="vbutton vbutton-opacity" @click="goTodetail(randomRecipe.Id)">Go Recipe </button>
+              </div>
+            </div>
+          </div>
+          <no-ssr placeholder="Loading...">
+            <div class="recipe-image-dynamic">
+              <div class="recipe-image-dynamic-lines">
+                <img src="../assets/line-1.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
+                <img src="../assets/line-2.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
+                <img src="../assets/line-3.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
+              </div>
+              <div class="recipe-image-dynamic-girl">
+                <img src="../assets/girl.png" width="80%" data-aos="fade-up" data-aos-duration="2000">
+              </div>
+            </div>
+          </no-ssr>
+        </div>
+      </section>
+      <no-ssr placeholder="Loading...">
+        <section class="break">
+          <img src="../assets/break-image.svg" width="30%" data-aos="zoom-in" data-aos-duration="1200">
+        </section>
+      </no-ssr>
+      <section class="recommend">
+        <h3>We recommend</h3>
+        <!--      <div v-for="(recommend, i) in recommends" :key="i">
         <img :src="'../assets/example-image-1.jpg'">
       </div> -->
-      <vueper-slides class="no-shadow" :arrows="false" :visible-slides="4" slide-multiple :gap="3" :slide-ratio="1 / 3"
-        :dragging-distance="120"
-        :breakpoints="{ 800: { visibleSlides: 1, slideMultiple: 2, bulletsOutside:true, fixedHeight:true} }">
-        <vueper-slide v-for="(recipe, i) in recipes" :key="i" :image="recipe.image">
-          <template v-slot:content>
-            <div class="vueperslide__content-wrapper vueperslide__content-wrapper--outside-bottom text-center">
-              <span class="title" @click="goTodetail(recipe.Id)">{{ recipe.title }}</span>
-            </div>
-          </template>
-        </vueper-slide>
-      </vueper-slides>
-    </section>
-    <section class="what-to-cook">
-      <no-ssr placeholder="Loading...">
-      <div class="what-to-cook-image">
-        <img src="../assets/cook-searching.svg" width="100%" data-aos="fade-up-right" data-aos-duration="2600">
-      </div>
-      </no-ssr>
-      <div class="what-to-cook-desc">
-        <h3> What To Cook </h3>
-        <h5>If you think what to cook with the
-          ingredients in your kitchen, you
-          are at the right place</h5>
-        <router-link to="/recipes" tag="button" class="vbutton vbutton-opacity">Recipes</router-link>
-      </div>
-    </section>
-    <section class="tricks">
-      <div class="tricks-header">
-        Tricks For
-        Beginner Chef's
-      </div>
-      <no-ssr placeholder="Loading...">
-      <div class="tricks-desc" data-aos="fade-up">
-        <p>Layers of sausage gravy, cheese and noodles work
-          so magically together,
-          you'll wonder why you never ate lasagna for
-          breakfast before.</p>
+        <vueper-slides class="no-shadow" :arrows="false" :visible-slides="4" slide-multiple :gap="3"
+          :slide-ratio="1 / 3" :dragging-distance="120"
+          :breakpoints="{ 800: { visibleSlides: 1, slideMultiple: 2, bulletsOutside:true, fixedHeight:true} }">
+          <vueper-slide v-for="(recipe, i) in recipes" :key="i" :image="recipe.image">
+            <template v-slot:content>
+              <div class="vueperslide__content-wrapper vueperslide__content-wrapper--outside-bottom text-center">
+                <span class="title" @click="goTodetail(recipe.Id)">{{ recipe.title }}</span>
+              </div>
+            </template>
+          </vueper-slide>
+        </vueper-slides>
+      </section>
+      <section class="what-to-cook">
+        <no-ssr placeholder="Loading...">
+          <div class="what-to-cook-image">
+            <img src="../assets/cook-searching.svg" width="100%" data-aos="fade-up-right" data-aos-duration="2600">
+          </div>
+        </no-ssr>
+        <div class="what-to-cook-desc">
+          <h3> What To Cook </h3>
+          <h5>If you think what to cook with the
+            ingredients in your kitchen, you
+            are at the right place</h5>
+          <router-link to="/recipes" tag="button" class="vbutton vbutton-opacity">Recipes</router-link>
+        </div>
+      </section>
+      <section class="tricks">
+        <div class="tricks-header">
+          Tricks For
+          Beginner Chef's
+        </div>
+        <no-ssr placeholder="Loading...">
+          <div class="tricks-desc" data-aos="fade-up">
+            <p>Layers of sausage gravy, cheese and noodles work
+              so magically together,
+              you'll wonder why you never ate lasagna for
+              breakfast before.</p>
 
-        <router-link to="/tricks" tag="button" class="vbutton vbutton-default">Tricks
-        </router-link>
-      </div>
-      </no-ssr>
-    </section>
-    <section class="blogs">
-      <vueper-slides class="no-shadow" :arrows="false" :visible-slides="3" slide-multiple :gap="2" :slide-ratio="1 / 3"
-        :dragging-distance="120"
-        :breakpoints="{ 800: { visibleSlides: 1, slideMultiple: 2,  bulletsOutside:true, fixedHeight:true} }">
-        <vueper-slide v-for="(recipe, i) in recipes" :key="i" :image="recipe.image">
-          <template v-slot:content>
-            <div class="vueperslide__content-wrapper vueperslide__content-wrapper--outside-bottom text-center">
-              <span class="title">{{ recipe.title }}</span>
-              <span class="content">{{ recipe.shortdesc }}</span>
-              <span>
-                <button class="vbutton vbutton-default" @click="goTodetail(recipe.Id)">Read More </button>
-              </span>
-            </div>
-          </template>
-        </vueper-slide>
-      </vueper-slides>
+            <router-link to="/tricks" tag="button" class="vbutton vbutton-default">Tricks
+            </router-link>
+          </div>
+        </no-ssr>
+      </section>
+      <section class="blogs">
+        <vueper-slides class="no-shadow" :arrows="false" :visible-slides="3" slide-multiple :gap="2"
+          :slide-ratio="1 / 3" :dragging-distance="120"
+          :breakpoints="{ 800: { visibleSlides: 1, slideMultiple: 2,  bulletsOutside:true, fixedHeight:true} }">
+          <vueper-slide v-for="(recipe, i) in recipes" :key="i" :image="recipe.image">
+            <template v-slot:content>
+              <div class="vueperslide__content-wrapper vueperslide__content-wrapper--outside-bottom text-center">
+                <span class="title">{{ recipe.title }}</span>
+                <span class="content">{{ recipe.shortdesc }}</span>
+                <span>
+                  <button class="vbutton vbutton-default" @click="goTodetail(recipe.Id)">Read More </button>
+                </span>
+              </div>
+            </template>
+          </vueper-slide>
+        </vueper-slides>
 
-    </section>
-    <section class="about">
-      <div class="about-desc">
-        <h3>Who Are We </h3>
-        <h4>We Are You</h4>
-        <p>Donec faucibus commodo odio,
-          vel iaculis ex tristique id. Ut
-          ultrices diam quis sapien
-          hendrerit, quis eleifend ipsum
-          pulvinar.</p>
-      </div>
-      <no-ssr placeholder="Loading...">
-      <div class="about-image">
-        <!--  data-aos="fade-up-left" -->
-        <img src="../assets/whoarewe.svg" data-aos="fade-up-left">
-      </div>
-      </no-ssr>
-    </section>
+      </section>
+      <section class="about">
+        <div class="about-desc">
+          <h3>Who Are We </h3>
+          <h4>We Are You</h4>
+          <p>Donec faucibus commodo odio,
+            vel iaculis ex tristique id. Ut
+            ultrices diam quis sapien
+            hendrerit, quis eleifend ipsum
+            pulvinar.</p>
+        </div>
+        <no-ssr placeholder="Loading...">
+          <div class="about-image">
+            <!--  data-aos="fade-up-left" -->
+            <img src="../assets/whoarewe.svg" data-aos="fade-up-left">
+          </div>
+        </no-ssr>
+      </section>
+    </div>
+    <Nuxt />
   </div>
-   <Nuxt />
-</div>
 </template>
 <style scoped lang="scss">
   .homepage {
@@ -392,8 +405,9 @@
   import 'vueperslides/dist/vueperslides.css'
   import data from '../static/data.json'
   import AOS from 'aos';
-  import 'aos/dist/aos.css';
-
+  if (process.client) {
+    require('aos')
+  }
   export default {
     name: 'Home',
     layout: 'Thefooter',
@@ -408,6 +422,7 @@
         myDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus vitae urna ut dignissim',
         recommends: data.recommends,
         recipes: data.recipes,
+         randomRecipe: '',
         selectedImage: null
       }
     },
@@ -423,11 +438,16 @@
       },
       randomItem(items) {
         return items[Math.floor(Math.random() * items.length)]
-      }
+      },
     },
+
     created() {
-      AOS.init(),
-        this.selectedImage = this.randomItem(this.recipes)
+    //  AOS.init(),
+    //    this.selectedImage = this.randomItem(this.recipes)
+    var randRecipe = [Math.floor(Math.random() *this.recipes.length)];
+
+    this.randomRecipe = this.recipes[randRecipe]
     }
   }
+
 </script>
