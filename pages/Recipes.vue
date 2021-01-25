@@ -1,6 +1,7 @@
 <template>
 <div>
         <theheader></theheader>
+        <client-only>
     <div class="recipes">
 
         <div class="recipes_categories">
@@ -20,17 +21,18 @@
             <div class="recipe" v-for="recipe in filteredRecipes" :key="recipe.Id">
                 <div class="recipe-image"><img :src="recipe.image"></div>
                 <div class="recipe-title">
-               <!--     <NuxtLink
-          :to="{ name: 'Recipedetails', params: {  Rid: rId } }"
+             <!--       <NuxtLink
+          :to="{ name: 'Recipedetails/:id?', params: {  id: recipe.Id } }"
         >
           {{ recipe.title }}
-        </NuxtLink> -->
-                    <h3 @click="goTodetail(recipe.Id)">{{recipe.title}}</h3>
+        </NuxtLink>-->
+                    <h3 @click="goTodetail(recipe.Id)">{{recipe.title}}</h3> 
                 </div>
             </div>
         </transition-group>
 
     </div>
+        </client-only>
      <thefooter></thefooter>
   </div>
 </template>
