@@ -50,7 +50,7 @@ export const routerOptions = {
   }, {
     path: "/RecipeDetails",
     component: _1a3a6ec8,
-    name: "Recipedetails"
+    name: "RecipeDetails"
   }, {
     path: "/Recipes",
     component: _d671720e,
