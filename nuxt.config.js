@@ -18,7 +18,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/styles/navbar.scss', '~/assets/styles/variables.scss'
+    '~/assets/styles/navbar.scss', '~/assets/styles/variables.scss', 'aos/dist/aos.css'
   ],
   styleResources: {
     scss: ['~/assets/styles/navbar.scss',
@@ -26,8 +26,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ["@/plugins/aos.client"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -41,5 +40,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
 }

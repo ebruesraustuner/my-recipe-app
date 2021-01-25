@@ -20,6 +20,11 @@
             <div class="recipe" v-for="recipe in filteredRecipes" :key="recipe.Id">
                 <div class="recipe-image"><img :src="recipe.image"></div>
                 <div class="recipe-title">
+                <!--    <NuxtLink
+          :to="{ name: 'Recipedetails', params: { id: recipe.Id } }"
+        >
+          {{ recipe.title }}
+        </NuxtLink> -->
                     <h3 @click="goTodetail(recipe.Id)">{{recipe.title}}</h3>
                 </div>
             </div>
@@ -205,6 +210,7 @@ import Theheader from '../layouts/Theheader.vue'
                 categories: data.categories
             }
         },
+        
         computed: {
             filteredRecipes: function () {
                 var filter = this.currentCat;
@@ -216,16 +222,17 @@ import Theheader from '../layouts/Theheader.vue'
         methods: {
             goTodetail(rId) {
                 this.$router.push({
+                   // path: '/recipedetails/:Rid',
                     name: 'recipedetails',
                     params: {
                         Rid: rId
                     }
                 })
             },
+            
             filter: function (cat) {
                 this.currentCat = cat;
             }
         },
-
     }
 </script>

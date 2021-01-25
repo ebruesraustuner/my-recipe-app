@@ -14,7 +14,6 @@ const _57582810 = () => interopDefault(import('..\\pages\\RecommendCook.vue' /* 
 const _1ab8845c = () => interopDefault(import('..\\pages\\Tricks.vue' /* webpackChunkName: "pages/Tricks" */))
 const _4f47e06a = () => interopDefault(import('..\\pages\\Variables.vue' /* webpackChunkName: "pages/Variables" */))
 const _025773c6 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _9b96ebca = () => interopDefault(import('..\\pages\\__Home.vue' /* webpackChunkName: "pages/__Home" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -72,10 +71,6 @@ export const routerOptions = {
     path: "/",
     component: _025773c6,
     name: "index"
-  }, {
-    path: "/:_Home",
-    component: _9b96ebca,
-    name: "_Home"
   }],
 
   fallback: false

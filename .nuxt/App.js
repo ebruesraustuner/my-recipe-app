@@ -9,6 +9,8 @@ import '..\\assets\\styles\\navbar.scss'
 
 import '..\\assets\\styles\\variables.scss'
 
+import '..\\node_modules\\aos\\dist\\aos.css'
+
 import _6f6c098b from '..\\layouts\\default.vue'
 import _7fd25786 from '..\\layouts\\navbar.vue'
 import _0b3b45f6 from '..\\layouts\\Thefooter.vue'
