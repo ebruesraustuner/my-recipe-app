@@ -3,70 +3,82 @@
     "name": "About",
     "path": "/About",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\About.vue",
-    "chunkName": "pages/About"
+    "chunkName": "pages/About",
+    "_name": "_5a11b8e1"
   },
   {
     "name": "Blog",
     "path": "/Blog",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Blog.vue",
-    "chunkName": "pages/Blog"
+    "chunkName": "pages/Blog",
+    "_name": "_38d2b87e"
   },
   {
     "name": "BlogDetails",
     "path": "/BlogDetails",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\BlogDetails.vue",
-    "chunkName": "pages/BlogDetails"
+    "chunkName": "pages/BlogDetails",
+    "_name": "_60250714"
   },
   {
     "name": "Contact",
     "path": "/Contact",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Contact.vue",
-    "chunkName": "pages/Contact"
+    "chunkName": "pages/Contact",
+    "_name": "_1f03d8f4"
   },
   {
-    "name": "RecipeDetails",
-    "path": "/RecipeDetails",
+    "name": "Recipedetails",
+    "path": "/Recipedetails",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipedetails.vue",
-    "chunkName": "pages/Recipedetails"
+    "chunkName": "pages/Recipedetails",
+    "_name": "_1a3a6ec8"
   },
   {
     "name": "Recipes",
     "path": "/Recipes",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipes.vue",
-    "chunkName": "pages/Recipes"
+    "chunkName": "pages/Recipes",
+    "_name": "_d671720e"
   },
   {
     "name": "RecommendCook",
     "path": "/RecommendCook",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\RecommendCook.vue",
-    "chunkName": "pages/RecommendCook"
+    "chunkName": "pages/RecommendCook",
+    "_name": "_57582810"
   },
   {
     "name": "Tricks",
     "path": "/Tricks",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Tricks.vue",
-    "chunkName": "pages/Tricks"
+    "chunkName": "pages/Tricks",
+    "_name": "_1ab8845c"
   },
   {
     "name": "Variables",
     "path": "/Variables",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Variables.vue",
-    "chunkName": "pages/Variables"
+    "chunkName": "pages/Variables",
+    "_name": "_4f47e06a"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_025773c6"
   },
   {
     "name": "recipedetails",
-    "path": "/recipeDetails",
-    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipedetails.vue"
+    "path": "/recipedetails",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipedetails.vue",
+    "_name": "_1a3a6ec8"
   },
   {
     "name": "blogdetails",
-    "path": "/BlogDetails",
-    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\BlogDetails.vue"
+    "path": "/Blogdetails",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\BlogDetails.vue",
+    "_name": "_60250714"
   }
 ]

@@ -48,9 +48,9 @@ export const routerOptions = {
     component: _1f03d8f4,
     name: "Contact"
   }, {
-    path: "/RecipeDetails",
+    path: "/Recipedetails",
     component: _1a3a6ec8,
-    name: "RecipeDetails"
+    name: "Recipedetails"
   }, {
     path: "/Recipes",
     component: _d671720e,
@@ -72,9 +72,9 @@ export const routerOptions = {
     component: _025773c6,
     name: "index"
   }, {
-    path: "/recipeDetails",
+    path: "/recipedetails",
     component: _1a3a6ec8,
-    name: "recipeDetails"
+    name: "recipedetails"
   }, {
     path: "/Blogdetails",
     component: _60250714,
