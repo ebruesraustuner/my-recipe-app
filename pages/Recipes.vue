@@ -131,6 +131,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 position: relative;
+                .recipe-image {
+                    max-height: 100%;
+                }
 
                 .recipe-title {
 
