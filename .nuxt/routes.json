@@ -24,10 +24,10 @@
     "chunkName": "pages/Contact"
   },
   {
-    "name": "RecipeDetails/",
+    "name": "RecipeDetails",
     "path": "/RecipeDetails",
-    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\RecipeDetails.vue",
-    "chunkName": "pages/RecipeDetails"
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipedetails.vue",
+    "chunkName": "pages/Recipedetails"
   },
   {
     "name": "Recipes",
@@ -58,5 +58,15 @@
     "path": "/",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\index.vue",
     "chunkName": "pages/index"
+  },
+  {
+    "name": "recipedetails",
+    "path": "/recipedetails",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipedetails.vue"
+  },
+  {
+    "name": "blogdetails",
+    "path": "/Blogdetails",
+    "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\BlogDetails.vue"
   }
 ]
