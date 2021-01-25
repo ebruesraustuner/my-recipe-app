@@ -72,9 +72,9 @@ export const routerOptions = {
     component: _025773c6,
     name: "index"
   }, {
-    path: "/recipedetails",
+    path: "/recipeDetails",
     component: _1a3a6ec8,
-    name: "recipedetails"
+    name: "recipeDetails"
   }, {
     path: "/Blogdetails",
     component: _60250714,

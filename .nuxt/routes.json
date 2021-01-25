@@ -61,12 +61,12 @@
   },
   {
     "name": "recipedetails",
-    "path": "/recipedetails",
+    "path": "/recipeDetails",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\Recipedetails.vue"
   },
   {
     "name": "blogdetails",
-    "path": "/Blogdetails",
+    "path": "/BlogDetails",
     "component": "C:\\\\Users\\\\ebruesra\\\\Desktop\\\\works\\\\recipe-app\\\\pages\\\\BlogDetails.vue"
   }
 ]

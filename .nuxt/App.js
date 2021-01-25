@@ -12,12 +12,11 @@ import '..\\assets\\styles\\variables.scss'
 import '..\\node_modules\\aos\\dist\\aos.css'
 
 import _6f6c098b from '..\\layouts\\default.vue'
-import _7fd25786 from '..\\layouts\\navbar.vue'
 import _0b3b45f6 from '..\\layouts\\Thefooter.vue'
 import _0e1172e8 from '..\\layouts\\Theheader.vue'
 import _261df0d4 from '..\\layouts\\Themain.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_navbar": sanitizeComponent(_7fd25786),"_Thefooter": sanitizeComponent(_0b3b45f6),"_Theheader": sanitizeComponent(_0e1172e8),"_Themain": sanitizeComponent(_261df0d4) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_Thefooter": sanitizeComponent(_0b3b45f6),"_Theheader": sanitizeComponent(_0e1172e8),"_Themain": sanitizeComponent(_261df0d4) }
 
 export default {
   render (h, props) {
@@ -103,6 +102,10 @@ export default {
 
     isFetching () {
       return this.nbFetching > 0
+    },
+
+    isPreview () {
+      return Boolean(this.$options.previewData)
     },
   },
 
