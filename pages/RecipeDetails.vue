@@ -71,7 +71,7 @@
   import Thefooter from '../layouts/Thefooter.vue'
   import Theheader from '../layouts/Theheader.vue'
   export default {
-    name: 'Recipedetails',
+    name: 'recipedetails',
     components: {
 
       Theheader,

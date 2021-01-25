@@ -1,12 +1,13 @@
 <template>
   <div>
     <div class="homepage">
+      <client-only>
       <section class="home">
         <div class="headers">
           <h1>{{ myHeader }}</h1>
           <h2>{{ mySubHeader }}</h2>
           <p>{{ myDesc }}</p>
-          <router-link to="/recipes" tag="button" class="vbutton vbutton-default vbutton-start">Recipes</router-link>
+          <NuxtLink to="/recipes" tag="button" class="vbutton vbutton-default vbutton-start">Recipes</NuxtLink>
         </div>
         <div class="image">
           <div class="chef-hat"></div>
@@ -28,8 +29,7 @@
             -->
             <div class="recipe-image-static">
               <div class="recipe-image-static-image">
-                <img :src="randomRecipe.image" alt="image desc">
-                
+                <img :src="randomRecipe.image" alt="image desc" />
               </div>
               <div class="recipe-desc">
                 <h4>{{randomRecipe.title}}</h4>
@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <no-ssr placeholder="Loading...">
+          
             <div class="recipe-image-dynamic">
               <div class="recipe-image-dynamic-lines">
                 <img src="../assets/line-1.png" width="80%" data-aos="fade-up" data-aos-duration="1600">
@@ -49,14 +49,14 @@
                 <img src="../assets/girl.png" width="80%" data-aos="fade-up" data-aos-duration="2000">
               </div>
             </div>
-          </no-ssr>
+         
         </div>
       </section>
-      <no-ssr placeholder="Loading...">
+      
         <section class="break">
           <img src="../assets/break-image.svg" width="30%" data-aos="zoom-in" data-aos-duration="1200">
         </section>
-      </no-ssr>
+      
       <section class="recommend">
         <h3>We recommend</h3>
         <!--      <div v-for="(recommend, i) in recommends" :key="i">
@@ -75,17 +75,17 @@
         </vueper-slides>
       </section>
       <section class="what-to-cook">
-        <no-ssr placeholder="Loading...">
+        
           <div class="what-to-cook-image">
             <img src="../assets/cook-searching.svg" width="100%" data-aos="fade-up-right" data-aos-duration="2600">
           </div>
-        </no-ssr>
+        
         <div class="what-to-cook-desc">
           <h3> What To Cook </h3>
           <h5>If you think what to cook with the
             ingredients in your kitchen, you
             are at the right place</h5>
-          <router-link to="/recipes" tag="button" class="vbutton vbutton-opacity">Recipes</router-link>
+          <NuxtLink to="/recipes" tag="button" class="vbutton vbutton-opacity">Recipes</NuxtLink>
         </div>
       </section>
       <section class="tricks">
@@ -93,17 +93,17 @@
           Tricks For
           Beginner Chef's
         </div>
-        <no-ssr placeholder="Loading...">
+        
           <div class="tricks-desc" data-aos="fade-up">
             <p>Layers of sausage gravy, cheese and noodles work
               so magically together,
               you'll wonder why you never ate lasagna for
               breakfast before.</p>
 
-            <router-link to="/tricks" tag="button" class="vbutton vbutton-default">Tricks
-            </router-link>
+            <NuxtLink to="/tricks" tag="button" class="vbutton vbutton-default">Tricks
+            </NuxtLink>
           </div>
-        </no-ssr>
+        
       </section>
       <section class="blogs">
         <vueper-slides class="no-shadow" :arrows="false" :visible-slides="3" slide-multiple :gap="2"
@@ -133,13 +133,14 @@
             hendrerit, quis eleifend ipsum
             pulvinar.</p>
         </div>
-        <no-ssr placeholder="Loading...">
+        
           <div class="about-image">
             <!--  data-aos="fade-up-left" -->
             <img src="../assets/whoarewe.svg" data-aos="fade-up-left">
           </div>
-        </no-ssr>
+      
       </section>
+      </client-only>
     </div>
     <Nuxt />
   </div>

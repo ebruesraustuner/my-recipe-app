@@ -20,8 +20,8 @@
             <div class="recipe" v-for="recipe in filteredRecipes" :key="recipe.Id">
                 <div class="recipe-image"><img :src="recipe.image"></div>
                 <div class="recipe-title">
-                <!--    <NuxtLink
-          :to="{ name: 'Recipedetails', params: { id: recipe.Id } }"
+               <!--     <NuxtLink
+          :to="{ name: 'Recipedetails', params: {  Rid: rId } }"
         >
           {{ recipe.title }}
         </NuxtLink> -->
@@ -222,7 +222,7 @@ import Theheader from '../layouts/Theheader.vue'
         methods: {
             goTodetail(rId) {
                 this.$router.push({
-                   // path: '/recipedetails/:Rid',
+                   path: '/recipedetails/:Rid',
                     name: 'recipedetails',
                     params: {
                         Rid: rId
