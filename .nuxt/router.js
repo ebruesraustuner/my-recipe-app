@@ -8,7 +8,7 @@ const _5a11b8e1 = () => interopDefault(import('..\\pages\\About.vue' /* webpackC
 const _38d2b87e = () => interopDefault(import('..\\pages\\Blog.vue' /* webpackChunkName: "pages/Blog" */))
 const _60250714 = () => interopDefault(import('..\\pages\\BlogDetails.vue' /* webpackChunkName: "pages/BlogDetails" */))
 const _1f03d8f4 = () => interopDefault(import('..\\pages\\Contact.vue' /* webpackChunkName: "pages/Contact" */))
-const _7da416a8 = () => interopDefault(import('..\\pages\\RecipeDetails.vue' /* webpackChunkName: "pages/RecipeDetails" */))
+const _1a3a6ec8 = () => interopDefault(import('..\\pages\\Recipedetails.vue' /* webpackChunkName: "pages/Recipedetails" */))
 const _d671720e = () => interopDefault(import('..\\pages\\Recipes.vue' /* webpackChunkName: "pages/Recipes" */))
 const _57582810 = () => interopDefault(import('..\\pages\\RecommendCook.vue' /* webpackChunkName: "pages/RecommendCook" */))
 const _1ab8845c = () => interopDefault(import('..\\pages\\Tricks.vue' /* webpackChunkName: "pages/Tricks" */))
@@ -49,8 +49,8 @@ export const routerOptions = {
     name: "Contact"
   }, {
     path: "/RecipeDetails",
-    component: _7da416a8,
-    name: "RecipeDetails"
+    component: _1a3a6ec8,
+    name: "Recipedetails"
   }, {
     path: "/Recipes",
     component: _d671720e,
@@ -71,6 +71,14 @@ export const routerOptions = {
     path: "/",
     component: _025773c6,
     name: "index"
+  }, {
+    path: "/recipedetails",
+    component: _1a3a6ec8,
+    name: "recipedetails"
+  }, {
+    path: "/Blogdetails",
+    component: _60250714,
+    name: "blogdetails"
   }],
 
   fallback: false
